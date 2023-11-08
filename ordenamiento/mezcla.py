@@ -3,15 +3,15 @@ from ordenes import *
 import random
 import time
 
+tiempos = Lista()
 
-for i in range(2, 7):
-    tiempos = Lista()
+for i in range(3, 8):
     tot_mezcla = 0
     for _ in range(10):
         lista = Lista()
         print("welta")
-        for j in range(10**i):
-           lista.insertar(random.randint(0, 10000))
+        for j in range(2**i):
+           lista.insertar(random.randint(0, 10000000))
         print("lista generada")
 
         ini_mezcla = time.time()
@@ -23,5 +23,6 @@ for i in range(2, 7):
         tot_mezcla += t_mezcla
 
     prom_mezcla = tot_mezcla / 10
-
+    tiempos.insertar(prom_mezcla)
     print("promedio:", prom_mezcla)
+tiempos.imprimir()

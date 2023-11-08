@@ -4,14 +4,14 @@ import random
 import time
 
 
-for i in range(2, 7):
-    tiempos = Lista()
+tiempos = Lista()
+for i in range(3, 9):
     tot_burbuja = 0
     for _ in range(10):
         lista = Lista()
         print("welta")
-        for j in range(10**i):
-           lista.insertar(random.randint(0, 10000))
+        for j in range(2**i):
+           lista.insertar(random.randint(0, 10000000))
         print("lista generada")
 
         ini_burbuja = time.time()
@@ -23,5 +23,7 @@ for i in range(2, 7):
         tot_burbuja += t_burbuja
 
     prom_burbuja = tot_burbuja / 10
-
+    tiempos.insertar(prom_burbuja)
     print("promedio:", prom_burbuja)
+
+tiempos.imprimir()
