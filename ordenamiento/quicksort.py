@@ -5,12 +5,12 @@ import time
 
 tiempos = Lista()
 
-for i in range(3, 10):
+for i in range(1, 6):
     tot_quick = 0
     for _ in range(10):
         lista = Lista()
         print("welta")
-        for j in range(2**i):
+        for j in range(300 * i):
            lista.insertar(random.randint(0, 10000000))
         print("lista generada")
 

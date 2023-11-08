@@ -7,12 +7,12 @@ import random
 
 tiempos = Lista()
 
-for i in range(3, 8):
+for i in range(1, 6):
     tot_arbol = 0
     lista = Lista()
     for _ in range(10):
         print("welta")
-        for _ in range(2**i):
+        for _ in range(300 * i):
             lista.insertar(random.randint(0, 10000000))
         print("lista generada")
 
